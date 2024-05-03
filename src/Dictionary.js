@@ -41,14 +41,16 @@ export default function Dictionary(props) {
         <section>
           <form onSubmit={handleSubmit}>
             <label>What word do you want to look up?</label>
-            <input type="serach" autoFocus={true} className="form-control search-input" placeholder="search a word.." defaultValue={props.defaultSearchkeyword} onChange={handleChange} required />
+            <input type="serach" autoFocus={true} className="form-control search-input" defaultValue={props.defaultSearchkeyword} onChange={handleChange} required />
           </form>
+          <div className="hint">Suggested words: sunset, forest, flower, yoga...</div>
         </section>
         <Results results={results} />
       </div>
     )
   } else {
-    return load();
+    load();
+    return "Loading....";
   }
 
 }
