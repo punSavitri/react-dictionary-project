@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Results from "./Results";
 import "./Dictionary.css";
+
 
 export default function Dictionary(props) {
   //console.log(props.defaultSearchKeyword);
@@ -11,7 +13,7 @@ export default function Dictionary(props) {
   const [loaded, setLoaded] = useState(false);
 
   function handleResponse(response) {
-    console.log(response.data);
+    console.log(response.data.word);
     setResults(response.data);
   }
   function search() {
@@ -42,6 +44,7 @@ export default function Dictionary(props) {
             <input type="serach" autoFocus={true} className="form-control search-input" placeholder="search a word.." defaultValue={props.defaultSearchkeyword} onChange={handleChange} required />
           </form>
         </section>
+        <Results results={results} />
       </div>
     )
   } else {
