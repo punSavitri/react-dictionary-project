@@ -30,6 +30,10 @@
   border-radius: 6px;
   width: 100%;
 }
+.hint {
+  margin-top: 5px;
+  opacity: 0.5;
+}
 /* media queries for web responsiveness */
 @media (max-width: 576px) {
   .Dictionary label {

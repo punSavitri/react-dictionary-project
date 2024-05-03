@@ -3,8 +3,16 @@ import "./Synonyms.css";
 
 export default function Synonyms(props) {
   console.log(props.synonyms)
-  return (
-    <h4>Hello</h4>
-
-  )
+  if (props.synonyms) {
+    return (
+      <ul className="Synonyms">
+        {
+          props.synonyms.map(function (synonym, index) {
+            return <li key={index}>{synonym}</li>;
+          })}
+      </ul>
+    );
+  } else {
+    return null;
+  }
 }
