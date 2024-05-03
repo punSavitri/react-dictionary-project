@@ -1,0 +1,14 @@
+.Results h2 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 1.5;
+  color: #000;
+  text-align: start;
+}
+@media (max-width: 576px) {
+  .Results h2 {
+    margin: 0;
+    font-size: 25px;
+  }
+}
